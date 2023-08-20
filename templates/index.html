@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Number Guessing Game</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Number Guessing Game</h1>
+    <p>{{ message }}</p>
+    <form action="/play" method="post">
+        <label for="guess">Enter your guess:</label>
+        <input type="number" id="guess" name="guess" min="1" max="100">
+        <button type="submit">Submit</button>
+    </form>
+    <p>Your score is: {{ score }}</p>
+</body>
+</html>
